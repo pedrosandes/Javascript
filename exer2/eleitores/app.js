@@ -17,9 +17,14 @@ function contadorVotos(total, brancos, nulos) {
     validos: porcentagem.toFixed(1),
   };
 }
-let resultadoVotos = contadorVotos(110000, 2100, 300);
-console.log('-------------------------------------------------');
-console.log(`A quantidade de votos validos são: ${resultadoVotos.validos}%`);
-console.log(`A quantidade de votos em brancos são: ${resultadoVotos.brancos}%`);
-console.log(`A quantidade de votos em nulos são: ${resultadoVotos.nulos}%`);
-console.log('-------------------------------------------------');
+let line = '-------------------------------------------------';
+let resultadoVotos = contadorVotos(50, 20, 5);
+let validosLog = `A quantidade de votos validos são: ${resultadoVotos.validos}%`,
+  brancosLog = `A quantidade de votos em brancos são: ${resultadoVotos.brancos}%`,
+  nulosLog = `A quantidade de votos em nulos são: ${resultadoVotos.nulos}%`;
+
+console.log(line);
+console.log(validosLog);
+console.log(brancosLog);
+console.log(nulosLog);
+console.log(line);

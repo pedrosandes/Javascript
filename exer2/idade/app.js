@@ -1,4 +1,3 @@
-const anos = 17;
 function calcularDias(idade) {
   const meses = 12;
   const dias = 30;
@@ -6,5 +5,6 @@ function calcularDias(idade) {
   qtdDias = qtdMeses * dias;
   return qtdDias;
 }
-
-console.log('Sua idade em dias é: ' + calcularDias(anos));
+let resultado = calcularDias(17);
+let resultadoLog = 'Sua idade em dias é: ' + resultado;
+console.log(resultadoLog);
