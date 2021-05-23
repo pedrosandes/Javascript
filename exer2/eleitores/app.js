@@ -18,7 +18,7 @@ function contadorVotos(total, brancos, nulos) {
   };
 }
 let line = '-------------------------------------------------';
-let resultadoVotos = contadorVotos(50, 20, 5);
+let resultadoVotos = contadorVotos(110000, 2358, 3580);
 let validosLog = `A quantidade de votos validos são: ${resultadoVotos.validos}%`,
   brancosLog = `A quantidade de votos em brancos são: ${resultadoVotos.brancos}%`,
   nulosLog = `A quantidade de votos em nulos são: ${resultadoVotos.nulos}%`;

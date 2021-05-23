@@ -16,6 +16,6 @@ function precoMaca(quantidade) {
   };
 }
 
-let qtdMaca = precoMaca(11);
+let qtdMaca = precoMaca(15);
 let qtdMacaLog = `Você comprou ${qtdMaca.quantidade} maças, então irá pagar R$ ${qtdMaca.custoTotal} reais.`;
 console.log(qtdMacaLog);
