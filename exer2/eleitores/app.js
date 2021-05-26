@@ -1,28 +1,25 @@
-function contadorVotos(total, brancos, nulos) {
+const votos = {
+  total: 110000,
+  brancos: 3750,
+  nulos: 2366,
+};
+
+function contadorVotos() {
   let porcentagem = 100;
 
-  totalBrancos = ((total - brancos) * 100) / total;
+  totalBrancos = ((votos.total - votos.brancos) * 100) / votos.total;
   porcentagemBrancos = porcentagem - totalBrancos;
-  total -= brancos;
+  votos.total -= votos.brancos;
 
-  totalNulos = ((total - nulos) * 100) / total;
+  totalNulos = ((votos.total - votos.nulos) * 100) / votos.total;
   porcentagemNulos = porcentagem - totalNulos;
-  total -= nulos;
+  votos.total -= votos.total;
 
   porcentagem -= porcentagemBrancos + porcentagemNulos;
-  return {
-    brancos: porcentagemBrancos.toFixed(1),
-    nulos: porcentagemNulos.toFixed(1),
-    validos: porcentagem.toFixed(1),
-  };
-}
-let line = '-------------------------------------------------';
-let validosLog = `A quantidade de votos validos são: ${resultadoVotos.validos}%`,
-  brancosLog = `A quantidade de votos em brancos são: ${resultadoVotos.brancos}%`,
-  nulosLog = `A quantidade de votos em nulos são: ${resultadoVotos.nulos}%`;
 
-console.log(line);
-console.log(validosLog);
-console.log(brancosLog);
-console.log(nulosLog);
-console.log(line);
+  console.log(`O total de votos validos são de: ${porcentagem.toFixed(1)}%`);
+  console.log(`O total de votos brancos são de: ${porcentagemBrancos.toFixed(1)}%`);
+  console.log(`O total de votos nulos são de: ${porcentagemNulos.toFixed(1)}%`);
+}
+
+contadorVotos(votos);
