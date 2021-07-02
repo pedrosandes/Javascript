@@ -22,7 +22,7 @@ const idades = [
 
 function calcularIdade({ nome, anos, meses, dias } = idades) {
   const tipoString =
-    typeof anos == 'string' || typeof meses == 'string' || typeof dias == 'string';
+    typeof anos != 'number' || typeof meses !== 'number' || typeof dias !== 'number';
   if (tipoString || !anos || !meses || !dias) {
     return console.log(`Error, verifique os dados.`);
   }

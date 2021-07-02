@@ -9,11 +9,9 @@ function contadorVotos() {
 
   totalBrancos = ((votos.total - votos.brancos) * 100) / votos.total;
   porcentagemBrancos = porcentagem - totalBrancos;
-  votos.total -= votos.brancos;
 
   totalNulos = ((votos.total - votos.nulos) * 100) / votos.total;
   porcentagemNulos = porcentagem - totalNulos;
-  votos.total -= votos.total;
 
   porcentagem -= porcentagemBrancos + porcentagemNulos;
 
